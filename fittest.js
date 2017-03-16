@@ -3,7 +3,7 @@
     var results = [];
 
     return {
-      check: function(a, b) {
+      assert: function(a, b) {
         results.push({
           expr: JSON.stringify(a) + ' === ' + JSON.stringify(b),
           ok: a === b
