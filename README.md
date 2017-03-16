@@ -12,18 +12,18 @@ A lightweight in-browser unit testing library.
 
     <script>
     fittest(function(test) {
-      test.check(1, 1);
-      test.check(1, '1');
+      test.assert(1, 1);
+      test.assert(1, '1');
     }, 'Test 1');
 
     fittest(function(test) {
-      test.check(2, 2);
-      test.check(true, '1');
+      test.assert(2, 2);
+      test.assert(true, '1');
     }, 'Test 2');
 
     fittest(function(test) {
-      test.check(1, { a: 2 });
-      test.check(true, [1, 2, 3]);
+      test.assert(1, { a: 2 });
+      test.assert(true, [1, 2, 3]);
     }, 'Test 3');
 
     console.log('All tests ok?', fittest.ok());
@@ -51,6 +51,6 @@ Would print on the console:
 
 * Inspired by [tape](https://github.com/substack/tape)
 * Doesn't have global harness variables (e.g. describe, it or expect functions) that may populate the scope, just a single global ```window.fittest```.
-* Has a single assertion function (check, which does strict equals).
+* Has a single assertion function (assert, which just does strict equals).
 * Weights 475 bytes when minified and gzipped.
 
