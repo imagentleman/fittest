@@ -45,7 +45,12 @@
     }
 
     return true;
-  }
+  };
+
+  fittest.reset = function() {
+    fittest.results = [];
+    fittest.tests = [];
+  };
 
   fittest.stats = function() {
     var tests = fittest.tests || [];
@@ -68,7 +73,7 @@
     }
 
     return stats;
-  }
+  };
 
   window.fittest = fittest;
 })();
